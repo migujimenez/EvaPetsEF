@@ -5,4 +5,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EvaPets.Data\EvaPets.Data.csproj" />
+    <ProjectReference Include="..\EvaPets.Domain\EvaPets.Domain.csproj" />
+  </ItemGroup>
 </Project>
