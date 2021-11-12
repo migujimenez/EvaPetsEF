@@ -8,5 +8,10 @@ namespace EvaPets.Data
     {
         public DbSet<Store> Stores { get; set; }
         public DbSet<Employees> Employees { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=Store");
+        }
     }
 }
