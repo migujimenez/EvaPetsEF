@@ -9,3 +9,5 @@ For using EF commands, it is necessary to follow the next steps:
 2. Restart VS
 3. Install EF Commands --> https://docs.microsoft.com/en-us/ef/core/cli/dotnet#dotnet-ef-migrations-add
 4. On Windows, follow this --> https://docs.microsoft.com/en-us/ef/core/cli/powershell
+
+To run EF Commands, the Data folder should be located in terminal window, otherwise, it won't work. 
