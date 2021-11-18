@@ -1,5 +1,4 @@
-﻿using System;
-namespace EvaPets.Domain
+﻿namespace EvaPets.Domain
 {
     public class Employees
     {

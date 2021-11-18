@@ -24,7 +24,7 @@ namespace EvaPets.UI
 
         private static void AddStore()
         {
-            var store = new Store { Name = "TheBigBull" };
+            var store = new Store { Name = "AllFarm" };
             _storeContext.Stores.Add(store);
             _storeContext.SaveChanges();
         }

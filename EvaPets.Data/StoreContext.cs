@@ -1,5 +1,4 @@
-﻿using System;
-using EvaPets.Domain;
+﻿using EvaPets.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace EvaPets.Data
@@ -8,6 +7,7 @@ namespace EvaPets.Data
     {
         public DbSet<Store> Stores { get; set; }
         public DbSet<Employees> Employees { get; set; }
+        public DbSet<Cities> Cities { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
