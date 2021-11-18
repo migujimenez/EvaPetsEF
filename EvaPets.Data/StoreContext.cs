@@ -13,5 +13,17 @@ namespace EvaPets.Data
         {
             optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=Store;User Id=sa;Password=Apto201.");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Store>()
+                .HasMany(c => c.Cities)
+                .WithMany(s => s.Store)
+                .UsingEntity<CitiesStore>
+                (sc => sc.HasOne<Cities>().WithMany(),
+                sc => sc.HasOne<Store>().WithMany())
+                .Property(sc => sc.DateOpened)
+                .HasDefaultValueSql("getdate()");
+        }
     }
 }
