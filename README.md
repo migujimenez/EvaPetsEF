@@ -14,7 +14,7 @@ To run EF Commands, the Data folder should be located in terminal window, otherw
 
 
 COMMANDS USED:
-dotnet ef [shows EF version]
-dotnet ef migrations script [generates migration script 20211117235324_init.cs]
-dotnet ef database update init --verbose [firts, drop DB and after running this, everthing is created based on migration file]
-dotnet ef dbcontext scaffold "Data Source=localhost;Initial Catalog=Store;User Id=sa;Password=Apto201." Microsoft.EntityFrameworkCore.SqlServer [create models and context from DB]
+1. dotnet ef [shows EF version]
+2. dotnet ef migrations script [generates migration script 20211117235324_init.cs]
+3. dotnet ef database update init --verbose [firts, drop DB and after running this, everthing is created based on migration file]
+4. dotnet ef dbcontext scaffold "Data Source=localhost;Initial Catalog=Store;User Id=sa;Password=Apto201." Microsoft.EntityFrameworkCore.SqlServer [create models and context from DB]
