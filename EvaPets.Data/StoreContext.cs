@@ -1,5 +1,7 @@
 ﻿using EvaPets.Domain;
 using Microsoft.EntityFrameworkCore;
+using static System.Console;
+using Microsoft.Extensions.Logging;
 
 namespace EvaPets.Data
 {
@@ -11,7 +13,9 @@ namespace EvaPets.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=Store;User Id=sa;Password=Apto201.");
+            optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=Store;User Id=sa;Password=Apto201.")
+                .LogTo(WriteLine, new[] { DbLoggerCategory.Database.Command.Name},
+                LogLevel.Information);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
