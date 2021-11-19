@@ -15,17 +15,23 @@ namespace EvaPets.UI
             WriteLine("Hello EvaPets Store!");
             _storeContext.Database.EnsureCreated();
             GetStore("Before Add");
-            AddStore();
+            AddStore("YourPlanetPet", "The Duck");
             GetStore("After Add:");
             Write("Press any key...");
             ReadKey();
 
         }
 
-        private static void AddStore()
+        private static void AddStore(params string[] names)
         {
-            var store = new Store { Name = "AllFarm" };
+            /*var store = new Store { Name = "AllFarm" };
             _storeContext.Stores.Add(store);
+            _storeContext.SaveChanges();*/
+
+            foreach (var store in names)
+            {
+                _storeContext.Stores.Add(new Store { Name = store });
+            }
             _storeContext.SaveChanges();
         }
 

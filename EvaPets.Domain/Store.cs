@@ -8,5 +8,6 @@ namespace EvaPets.Domain
         public string Name { get; set; }
         public List<Employees> Employees { get; set; } = new List<Employees>();
         public List<Cities> Cities { get; set; } = new List<Cities>();
+        public Manager Manager { get; set; }
     }
 }
