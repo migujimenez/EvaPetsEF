@@ -39,12 +39,18 @@ namespace EvaPets.UI
 
         private static void AddStoresAndCities()
         {
-            _storeContext.Stores.AddRange(
+            _storeContext.AddRange(
+                new Store { Name = "Virgin"},
+                new Store { Name = "Eden"},
+                new Cities { Name = "New York"},
+                new Cities { Name = "Paris"}
+                );
+            /*_storeContext.Stores.AddRange(
                 new Store { Name = "Tower Records" },
                 new Store { Name = "MyMusic" });
             _storeContext.Cities.AddRange(
                 new Cities { Name = "Bogota"},
-                new Cities { Name = "London" });
+                new Cities { Name = "London" });*/
             _storeContext.SaveChanges();
         }
 
