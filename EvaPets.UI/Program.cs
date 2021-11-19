@@ -15,7 +15,7 @@ namespace EvaPets.UI
             WriteLine("Hello EvaPets Store!");
             _storeContext.Database.EnsureCreated();
             GetStore("Before Add");
-            //AddStore("YourPlanetPet", "The Duck");
+            AddStore("YourPlanetPet", "The Duck");
             GetStore("After Add:");
             Write("Press any key...");
             ReadKey();

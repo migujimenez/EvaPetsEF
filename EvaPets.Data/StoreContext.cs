@@ -15,7 +15,8 @@ namespace EvaPets.Data
         {
             optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=Store;User Id=sa;Password=Apto201.")
                 .LogTo(WriteLine, new[] { DbLoggerCategory.Database.Command.Name},
-                LogLevel.Information);
+                LogLevel.Information)
+                .EnableSensitiveDataLogging();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
